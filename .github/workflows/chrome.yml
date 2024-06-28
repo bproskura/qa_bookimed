@@ -59,3 +59,12 @@ jobs:
         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PUBLISH_BRANCH: gh-pages-test
         PUBLISH_DIR: allure-history
+
+    - name: Notify Slack
+      env:
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+        SLACK_CHANNEL: 'autotests'  # Например, 'general'
+      run: |
+        curl -X POST -H 'Content-type: application/json' \
+        --data "{\"text\":\"Новый пуш в репозиторий!\"}" \
+        "https://slack.com/api/chat.postMessage?token=$SLACK_BOT_TOKEN&channel=$SLACK_CHANNEL&pretty=1"
