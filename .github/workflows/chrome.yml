@@ -60,11 +60,17 @@ jobs:
         PUBLISH_BRANCH: gh-pages-test
         PUBLISH_DIR: allure-history
 
-    - name: Notify Slack
-      env:
-        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-        SLACK_CHANNEL: 'autotests'  # Например, 'general'
-      run: |
-        curl -X POST -H 'Content-type: application/json' \
-        --data "{\"text\":\"Новый пуш в репозиторий!\"}" \
-        "https://slack.com/api/chat.postMessage?token=$SLACK_BOT_TOKEN&channel=$SLACK_CHANNEL&pretty=1"
+    - name: slack - GitHub Actions Slack integration
+      id: send_message_to_slack
+      uses: act10ns/slack@v2.0.0
+      with:
+         webhook-url: ${{ secrets.SLACK_WEBHOOK }}
+         status: ${{ job.status }}
+         steps: ${{ toJson(steps) }}
+         channel: 'automation_result'
+         message: |
+          ${{ job.status == 'success' && '_Tests passed successfully_' || '_Tests failed_' }}
+          
+          *Workflow URL:* https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+         if: always() # Pick up events even if the job fails or is canceled.
