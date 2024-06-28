@@ -66,7 +66,7 @@ jobs:
 
     - uses: actions/upload-pages-artifact@v1
       with:
-        name: allure-report
+        name: github-pages
         path: allure-report
 
     - name: Notify Slack on test completion
@@ -79,6 +79,7 @@ jobs:
         message: |
           ${{ job.status == 'success' && '_Tests passed successfully_' || '_Tests failed_' }}
           *Workflow URL:* https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          *Allure Report URL:* https://bproskura.github.io/qa_bookimed/
 
   deploy:
     if: always()
