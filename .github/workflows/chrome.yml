@@ -101,6 +101,117 @@ jobs:
         with:
           name: github-pages
           path: ./allure-report
+name: Bookimed tests
+on:
+  schedule:
+    - cron: "0 17 * * 6"
+  workflow_dispatch:
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+    - name: Notify Slack on test start
+      if: always()
+      uses: act10ns/slack@v1
+      with:
+        webhook-url: ${{ secrets.SLACK_WEBHOOK }}
+        status: starting
+        channel: 'automation_result'
+        message: |
+          _Starting API Tests..._ 
+          *Workflow URL:* https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Ensure browsers are installed
+      run: python -m playwright install --with-deps
+
+    - name: Run your tests
+      run: pytest --alluredir allure-results --headless=True
+
+    - name: Upload Allure results
+      uses: actions/upload-artifact@v2
+      if: always()
+      with:
+        name: github-pages
+        path: allure-results
+        retention-days: 20
+
+    - name: Get Allure history
+      uses: actions/checkout@v2
+      if: always()
+      continue-on-error: true
+      with:
+        ref: gh-pages
+        path: gh-pages-test
+
+    - name: Generate Allure Report
+      uses: simple-elf/allure-report-action@master
+      if: always()
+      id: allure-report
+      with:
+        allure_results: allure-results
+        allure_report: allure-report
+        gh_pages: gh-pages-test
+        allure_history: allure-history
+        keep_reports: 20
+
+    - name: Upload Allure report
+      uses: actions/upload-artifact@v2
+      if: always()
+      with:
+        name: github-pages
+        path: allure-report
+
+    - name: Notify Slack on test completion
+      if: always()
+      uses: act10ns/slack@v2.0.0
+      with:
+        webhook-url: ${{ secrets.SLACK_WEBHOOK }}
+        status: ${{ job.status }}
+        channel: 'automation_result'
+        message: |
+          ${{ job.status == 'success' && '_Tests passed successfully_' || '_Tests failed_' }}
+          *Workflow URL:* https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          *Allure Report URL:* https://bproskura.github.io/qa_bookimed/
+
+  deploy:
+    if: always()
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Download Allure report artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: github-pages
+          path: ./allure-report
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          artifact-name: github-pages
+          path: ./allure-report
 
       - name: Deploy to GitHub Pages
         id: deployment
