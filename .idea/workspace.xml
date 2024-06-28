@@ -4,8 +4,140 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c2009a0-3fb1-46c2-b290-679ab379c491" name="Changes" comment="">
+    <list default="true" id="5c2009a0-3fb1-46c2-b290-679ab379c491" name="Changes" comment="push">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nojekyll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/data/attachments/12ce340efd366d2.uri" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/data/attachments/fc9b26fbcb8f6c46.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/data/behaviors.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/data/behaviors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/data/categories.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/data/categories.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/data/packages.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/data/suites.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/data/suites.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/data/test-cases/87ddefe9f3b4ab96.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/data/test-cases/def205df01375f71.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/data/timeline.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/export/influxDbData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/export/mail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/export/prometheusData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/history/categories-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/history/duration-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/history/history-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/history/history.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/history/retry-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/plugin/behaviors/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/plugin/packages/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/plugin/screen-diff/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/plugin/screen-diff/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/widgets/behaviors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/widgets/categories-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/widgets/categories.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/widgets/duration-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/widgets/duration.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/widgets/environment.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/widgets/executors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/widgets/history-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/widgets/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/widgets/retry-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/widgets/severity.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/widgets/status-chart.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/widgets/suites.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10/widgets/summary.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/data/attachments/aa56c33f39ec4f09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/data/attachments/b515225e56dd6a66.uri" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/data/behaviors.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/data/behaviors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/data/categories.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/data/categories.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/data/packages.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/data/suites.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/data/suites.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/data/test-cases/201c05dd6cdab764.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/data/timeline.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/export/influxDbData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/export/mail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/export/prometheusData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/history/categories-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/history/duration-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/history/history-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/history/history.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/history/retry-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/plugin/behaviors/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/plugin/packages/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/plugin/screen-diff/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/plugin/screen-diff/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/widgets/behaviors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/widgets/categories-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/widgets/categories.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/widgets/duration-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/widgets/duration.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/widgets/environment.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/widgets/executors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/widgets/history-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/widgets/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/widgets/retry-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/widgets/severity.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/widgets/status-chart.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/widgets/suites.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8/widgets/summary.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/data/attachments/bfbab6fb358cd689.uri" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/data/attachments/f771305f4189590a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/data/behaviors.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/data/behaviors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/data/categories.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/data/categories.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/data/packages.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/data/suites.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/data/suites.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/data/test-cases/ec59b717c3c87c89.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/data/test-cases/f2e3a58ccd381688.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/data/timeline.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/export/influxDbData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/export/mail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/export/prometheusData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/history/categories-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/history/duration-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/history/history-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/history/history.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/history/retry-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/plugin/behaviors/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/plugin/packages/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/plugin/screen-diff/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/plugin/screen-diff/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/widgets/behaviors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/widgets/categories-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/widgets/categories.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/widgets/duration-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/widgets/duration.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/widgets/environment.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/widgets/executors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/widgets/history-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/widgets/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/widgets/retry-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/widgets/severity.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/widgets/status-chart.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/widgets/suites.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9/widgets/summary.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/last-history/categories-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/last-history/duration-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/last-history/history-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/last-history/history.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/last-history/retry-trend.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +160,6 @@
   &quot;keyToString&quot;: {
     &quot;Python tests.Python tests for test_request_call.TestBookimed.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/macbook/Documents/qa_bookimed&quot;
   }
 }</component>
@@ -70,6 +201,19 @@
       <option name="presentableId" value="Default" />
       <updated>1719045337830</updated>
     </task>
+    <task id="LOCAL-00001" summary="push">
+      <option name="closed" value="true" />
+      <created>1719600124511</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719600124511</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="push" />
+    <option name="LAST_COMMIT_MESSAGE" value="push" />
   </component>
 </project>
