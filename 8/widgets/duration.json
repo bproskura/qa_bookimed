@@ -1,0 +1,1 @@
+[{"uid":"76a37132fceaeef4","name":"Перевірка запиту на дзвінок","time":{"start":1719597702991,"stop":1719597717175,"duration":14184},"status":"passed","severity":"normal"},{"uid":"201c05dd6cdab764","name":"Failed test","time":{"start":1719597717417,"stop":1719597719674,"duration":2257},"status":"failed","severity":"normal"}]
