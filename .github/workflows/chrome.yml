@@ -28,7 +28,7 @@ jobs:
 
       - name: Run tests with pytest and generate Allure report
         run: |
-          pytest --alluredir=allure-results --headless && \
+          pytest --alluredir=allure-results
           python -m allure generate allure-results -o allure-report --clean
         if: always()
 
