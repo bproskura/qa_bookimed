@@ -81,6 +81,7 @@ jobs:
           *Workflow URL:* https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
   deploy:
+    if: always()
     needs: test
     runs-on: ubuntu-latest
     permissions:
