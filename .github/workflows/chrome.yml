@@ -38,7 +38,8 @@ jobs:
     - name: Run your tests
       run: pytest --alluredir allure-results --headless=True
 
-    - uses: actions/upload-artifact@v4
+    - name: Upload Allure results
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: allure-results
@@ -64,7 +65,8 @@ jobs:
         allure_history: allure-history
         keep_reports: 20
 
-    - uses: actions/upload-pages-artifact@v1
+    - name: Upload Allure report
+      uses: actions/upload-artifact@v4
       with:
         name: github-pages
         path: allure-report
@@ -94,6 +96,15 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
+      - name: Download Allure report artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: github-pages
+          path: ./allure-report
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact-name: github-pages
+          path: ./allure-report
