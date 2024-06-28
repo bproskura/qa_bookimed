@@ -46,14 +46,6 @@ jobs:
         path: allure-results
         retention-days: 20
 
-    - name: Get Allure history
-      uses: actions/checkout@v2
-      if: always()
-      continue-on-error: true
-      with:
-        ref: gh-pages
-        path: gh-pages-test
-
     - name: Generate Allure Report
       uses: simple-elf/allure-report-action@master
       if: always()
@@ -108,8 +100,4 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          timeout: 600000
-          error_count: 10
-          reporting_interval: 5000
           artifact_name: github-pages
-          preview: false
