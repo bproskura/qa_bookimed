@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Jun 28 18:01:42 GMT 2024","Fri Jun 28 18:01:57 GMT 2024","14184","Bookimed","Заповнення форм","TestBookimed","","","Перевірка запиту на дзвінок",""
+"failed","Fri Jun 28 18:01:57 GMT 2024","Fri Jun 28 18:01:59 GMT 2024","2257","Bookimed","Заповнення форм","TestBookimed","","","Failed test",""
