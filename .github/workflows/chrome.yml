@@ -8,6 +8,15 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
+    - uses: act10ns/slack@v1
+      with:
+          webhook-url: ${{ secrets.SLACK_WEBHOOK }}
+          status: starting
+          channel: 'automation_result'
+          message: |
+            _Starting API Tests..._ 
+            *Workflow URL:* https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          if: always()
     - uses: actions/checkout@v4
     - name: Set up Python
       uses: actions/setup-python@v4
