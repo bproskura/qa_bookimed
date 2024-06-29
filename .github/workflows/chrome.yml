@@ -8,77 +8,83 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.12'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-    - name: Ensure browsers are installed
-      run: python -m playwright install --with-deps
+      - name: Ensure browsers are installed
+        run: python -m playwright install --with-deps
 
-    - name: Run your tests
-      run: pytest --alluredir allure-results --headless=True
+      - name: Run your tests
+        run: pytest --alluredir=allure-results --headless=True
+        if: always()
 
-    - uses: actions/upload-artifact@v4
-      if: always()
-      with:
-        name: allure-results
-        path: allure-results
-        retention-days: 20
+      - name: Upload Allure results as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: allure-results
+          retention-days: 20
 
-    - name: Get Allure history
-      uses: actions/checkout@v4
-      if: always()
-      continue-on-error: true
-      with:
-        ref: gh-pages
-        path: gh-pages-test
+      - name: Get Allure history
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+        if: always()
+        continue-on-error: true
 
-    - name: Generate Allure Report
-      uses: simple-elf/allure-report-action@master
-      if: always()
-      id: allure-report
-      with:
-        allure_results: allure-results
-        allure_report: allure-report
-        gh_pages: gh-pages-test
-        allure_history: allure-history
-        keep_reports: 20
+      - name: Generate Allure Report
+        uses: simple-elf/allure-report-action@master
+        id: allure-report
+        with:
+          allure_results: allure-results
+          allure_report: allure-report
+          gh_pages: gh-pages
+          allure_history: gh-pages/allure-history
+          keep_reports: 20
+        if: always()
 
-    - name: Deploy report to GitHub Pages
-      if: always()
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: gh-pages
-        publish_dir: allure-report
+      - name: List Allure Report directory contents
+        run: ls -la allure-report
+        if: always()
 
-    - name: Notify Slack on test start
-      if: always()
-      uses: act10ns/slack@v1
-      with:
-        webhook-url: ${{ secrets.SLACK_WEBHOOK }}
-        status: starting
-        channel: 'automation_result'
-        message: |
-          _Starting API Tests..._ 
-          *Workflow URL:* https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+      - name: Deploy report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-report
+        if: always()
 
-    - name: Notify Slack on test completion
-      if: always()
-      uses: act10ns/slack@v2.0.0
-      with:
-        webhook-url: ${{ secrets.SLACK_WEBHOOK }}
-        status: ${{ job.status }}
-        channel: 'automation_result'
-        message: |
-          ${{ job.status == 'success' && '_Tests passed successfully_' || '_Tests failed_' }}
-          *Workflow URL:* https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+      - name: Notify Slack on test start
+        uses: act10ns/slack@v1
+        with:
+          webhook-url: ${{ secrets.SLACK_WEBHOOK }}
+          status: starting
+          channel: 'automation_result'
+          message: |
+            _Starting API Tests..._ 
+            *Workflow URL:* https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        if: always()
+
+      - name: Notify Slack on test completion
+        uses: act10ns/slack@v2.0.0
+        with:
+          webhook-url: ${{ secrets.SLACK_WEBHOOK }}
+          status: ${{ job.status }}
+          channel: 'automation_result'
+          message: |
+            ${{ job.status == 'success' && '_Tests passed successfully_' || '_Tests failed_' }}
+            *Workflow URL:* https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        if: always()
