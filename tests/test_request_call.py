@@ -29,3 +29,10 @@ class TestBookimed:
         with allure.step("Переходимо за посиланням"):
             index_page.goto("/")
         assert 2 == 3
+
+    @allure.title("Pass test")
+    def test_pass(self, page:Page):
+        index_page = IndexPage(page)
+        with allure.step("Переходимо за посиланням"):
+            index_page.goto("/")
+        assert 2 == 2
