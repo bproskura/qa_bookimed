@@ -101,5 +101,6 @@ jobs:
         if: always()
 
       - name: Send Slack message on completion
-        id: send_slack_message
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         run: python data/slack_test_result_script.py

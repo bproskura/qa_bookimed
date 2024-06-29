@@ -1,7 +1,10 @@
 import json
 import xml.etree.ElementTree as ET
-
+import os
+from dotenv import load_dotenv
 import requests
+
+load_dotenv()
 
 
 def extract_test_results(file_path):
@@ -58,7 +61,7 @@ if __name__ == "__main__":
     total_tests, total_failures, failed_tests = extract_test_results(file_path)
 
     # Slack webhook URL
-    webhook_url = "https://hooks.slack.com/services/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"
+    webhook_url = os.getenv('SLACK_WEBHOOK')
 
     # Send Slack message with test results
     send_slack_message(webhook_url, total_tests, total_failures, failed_tests)
