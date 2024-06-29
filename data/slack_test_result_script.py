@@ -58,7 +58,7 @@ if __name__ == "__main__":
     total_tests, total_failures, failed_tests = extract_test_results(file_path)
 
     # Slack webhook URL
-    webhook_url = "https://hooks.slack.com/services/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"
+    webhook_url = "https://hooks.slack.com/services/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"
 
     # Send Slack message with test results
     send_slack_message(webhook_url, total_tests, total_failures, failed_tests)
