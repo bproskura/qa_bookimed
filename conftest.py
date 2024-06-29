@@ -86,8 +86,8 @@ def pytest_configure(config):
     alluredir = config.getoption("--alluredir")
     browser_name = config.getoption("--browser_name")
     env_properties = {
-        "DESCRIPTION": "Base tests for landings",
-        # "BASE_URL": "\n".join(f"{k}: {v}" for k, v in cfg.BASE_LANDINGS_URL.items()),
+        "DESCRIPTION": "Bookimed QA Tests",
+        "BASE_URL": cfg.BASE_URL,
         "BROWSER": browser_name,
     }
     add_allure_environment_properties(alluredir, env_properties)

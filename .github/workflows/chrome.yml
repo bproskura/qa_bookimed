@@ -10,6 +10,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Notify Slack on test start
+        uses: act10ns/slack@v1
+        with:
+          webhook-url: ${{ secrets.SLACK_WEBHOOK }}
+          status: starting
+          channel: 'automation_result'
+          message: |
+            _Starting API Tests..._ 
+            *Workflow URL:* https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        if: always()
+
       - uses: actions/checkout@v4
 
       - name: Set up Python
@@ -67,15 +78,9 @@ jobs:
           publish_dir: allure-report
         if: always()
 
-      - name: Notify Slack on test start
-        uses: act10ns/slack@v1
-        with:
-          webhook-url: ${{ secrets.SLACK_WEBHOOK }}
-          status: starting
-          channel: 'automation_result'
-          message: |
-            _Starting API Tests..._ 
-            *Workflow URL:* https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+      - name: Purge GitHub Pages cache
+        run: |
+          curl -X PURGE https://bproskura.github.io/qa_bookimed/
         if: always()
 
       - name: Notify Slack on test completion
