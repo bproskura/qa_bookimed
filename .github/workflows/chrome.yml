@@ -44,12 +44,6 @@ jobs:
         if: always()
         continue-on-error: true
 
-      - name: Copy history to Allure results
-        run: |
-          mkdir -p allure-results/history
-          cp -R gh-pages/allure-report/history allure-results/history
-        if: always()
-
       - name: Generate Allure Report
         uses: simple-elf/allure-report-action@master
         id: allure-report
@@ -57,7 +51,7 @@ jobs:
           allure_results: allure-results
           allure_report: allure-report
           gh_pages: gh-pages
-          allure_history: gh-pages/allure-report/history
+          allure_history: gh-pages/allure-history
           keep_reports: 20
         if: always()
 
