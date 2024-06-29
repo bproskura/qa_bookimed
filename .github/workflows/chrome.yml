@@ -11,6 +11,7 @@ jobs:
 
     steps:
       - name: Notify Slack on test start
+        id: send_starting_message
         uses: act10ns/slack@v1
         with:
           webhook-url: ${{ secrets.SLACK_WEBHOOK }}
@@ -50,6 +51,7 @@ jobs:
           name: allure-results
           path: allure-results
           retention-days: 20
+        if: always()
 
       - name: Get Allure history
         uses: actions/checkout@v4
@@ -61,7 +63,6 @@ jobs:
 
       - name: Generate Allure Report
         uses: simple-elf/allure-report-action@master
-        id: allure-report
         with:
           allure_results: allure-results
           allure_report: allure-report
@@ -89,6 +90,7 @@ jobs:
         if: always()
 
       - name: Notify Slack on test completion
+        id: generate_report
         uses: act10ns/slack@v2.0.0
         with:
           webhook-url: ${{ secrets.SLACK_WEBHOOK }}
@@ -102,6 +104,7 @@ jobs:
         if: always()
 
       - name: Send Slack message on completion
+        id: send_test_result
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         run: python data/slack_test_result_script.py
