@@ -1,1 +1,0 @@
-[{"uid":"e0c5bab5a40e0664","name":"Failed test","time":{"start":1719647376711,"stop":1719647378755,"duration":2044},"status":"failed","severity":"normal"},{"uid":"da57ca672befd66","name":"Перевірка запиту на дзвінок","time":{"start":1719647363243,"stop":1719647376512,"duration":13269},"status":"passed","severity":"normal"}]
