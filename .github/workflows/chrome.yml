@@ -42,6 +42,7 @@ jobs:
 
       - name: Run custom script and notify Slack
         if: always()
+        id: custom-script
         run: python data/slack_test_result_script.py | tee result.log
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
