@@ -9,8 +9,7 @@ jobs:
   notify_slack:
     runs-on: ubuntu-latest
     steps:
-      - name: Send Slack message
+      - name: Send Slack message on completion
         env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-        run: |
-          python -c "import json, requests; payload = {'text': 'Hello from GitHub Actions!'}; headers = {'Content-Type': 'application/json'}; response = requests.post('${SLACK_WEBHOOK}', headers=headers, data=json.dumps(payload)); print(response.text)"
+            SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        run: python data/slack_test_result_script.py
