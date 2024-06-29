@@ -93,6 +93,7 @@ jobs:
         with:
           webhook-url: ${{ secrets.SLACK_WEBHOOK }}
           status: ${{ job.status }}
+          steps: ${{ toJson(steps) }}
           channel: 'automation_result'
           message: |
             ${{ job.status == 'success' && '_Tests passed successfully_' || '_Tests failed_' }}
