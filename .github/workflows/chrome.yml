@@ -104,3 +104,4 @@ jobs:
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         run: python data/slack_test_result_script.py
+        if: always()

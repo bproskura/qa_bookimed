@@ -1,0 +1,16 @@
+name: Slack Notification Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify_slack:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Slack message
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        run: |
+          python -c "import json, requests; payload = {'text': 'Hello from GitHub Actions!'}; headers = {'Content-Type': 'application/json'}; response = requests.post('${SLACK_WEBHOOK}', headers=headers, data=json.dumps(payload)); print(response.text)"
