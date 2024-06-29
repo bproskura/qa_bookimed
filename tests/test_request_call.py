@@ -36,3 +36,11 @@ class TestBookimed:
         with allure.step("Переходимо за посиланням"):
             index_page.goto("/")
         assert 2 == 2
+
+    @allure.title("Second failed test")
+    def test_request_call_from_home_page(self, page:Page):
+        index_page = IndexPage(page)
+        with allure.step("Переходимо за посиланням"):
+            index_page.goto("/")
+        assert 2 == 5
+

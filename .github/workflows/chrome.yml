@@ -40,6 +40,12 @@ jobs:
         run: pytest --alluredir=allure-results --headless=True
         if: always()
 
+      - name: Run custom script and notify Slack
+        if: always()
+        run: python data/slack_test_result_script.py | tee result.log
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+
       - name: Upload Allure results as artifact
         uses: actions/upload-artifact@v4
         with:
@@ -92,4 +98,13 @@ jobs:
           message: |
             ${{ job.status == 'success' && '_Tests passed successfully_' || '_Tests failed_' }}
             *Workflow URL:* https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            *Allure Report:* https://bproskura.github.io/qa_bookimed/
+            
+            *Test Results:*
+            
+            TOTAL_TESTS=${{ steps.custom-script.outputs.total_tests }}
+            TOTAL_FAILURES=${{ steps.custom-script.outputs.total_failures }}
+            FAILED_TESTS:
+            
+            ${{ steps.custom-script.outputs.failed_tests }}
         if: always()
