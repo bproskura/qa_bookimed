@@ -1,1 +1,1 @@
-[{"values":["Bookimed QA Tests"],"name":"DESCRIPTION"},{"values":["None"],"name":"BASE_URL"},{"values":["chrome"],"name":"BROWSER"}]
+[{"values":["Bookimed QA Tests"],"name":"DESCRIPTION"},{"values":["https://us-uk.bookimed.com"],"name":"BASE_URL"},{"values":["chrome"],"name":"BROWSER"}]
