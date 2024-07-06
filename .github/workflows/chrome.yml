@@ -45,6 +45,7 @@ jobs:
           PHONE: ${{ secrets.PHONE }}
           SMS_CODE: ${{ secrets.SMS_PHONE }}
           DEFAULT_LOCALE: ${{ secrets.DEFAULT_LOCALE }}
+          BASE_URL: ${{ secrets.BASE_URL }}
         run: pytest --alluredir=allure-results --headless=True
         if: always()
 
