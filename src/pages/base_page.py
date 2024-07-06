@@ -15,3 +15,7 @@ class BasePage:
     @step("click button")
     def click_btn(self, locator: str) -> None:
         self.page.locator(locator).click()
+
+    @step("get page")
+    def get_page(self) -> Page:
+        return self.page

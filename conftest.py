@@ -1,3 +1,4 @@
+import logging
 from typing import Generator
 
 import pytest
@@ -12,6 +13,9 @@ from modules.Allure import (
     log_location,
     log_screenshot,
 )
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 pytest_plugins = ()
 
@@ -53,7 +57,7 @@ def context(playwright: Playwright, pytestconfig) -> Generator[BrowserContext, N
             "--wm-window-animations-disabled",
             "--disable-notifications",
             "--mute-audio",
-            "--accept-lang=UK",
+            "--accept-lang=UA",
             "--browser-test",
         ],
     )

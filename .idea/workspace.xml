@@ -4,145 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c2009a0-3fb1-46c2-b290-679ab379c491" name="Changes" comment="push">
+    <list default="true" id="5c2009a0-3fb1-46c2-b290-679ab379c491" name="Changes" comment="Add slack script">
+      <change afterPath="$PROJECT_DIR$/src/pages/order_form/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/order_form/order_form.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/procedure_page/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/procedure_page/procedure_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nojekyll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/data/attachments/12ce340efd366d2.uri" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/data/attachments/fc9b26fbcb8f6c46.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/data/behaviors.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/data/behaviors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/data/categories.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/data/categories.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/data/packages.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/data/suites.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/data/suites.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/data/test-cases/87ddefe9f3b4ab96.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/data/test-cases/def205df01375f71.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/data/timeline.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/export/influxDbData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/export/mail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/export/prometheusData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/history/categories-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/history/duration-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/history/history-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/history/history.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/history/retry-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/plugin/behaviors/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/plugin/packages/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/plugin/screen-diff/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/plugin/screen-diff/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/widgets/behaviors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/widgets/categories-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/widgets/categories.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/widgets/duration-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/widgets/duration.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/widgets/environment.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/widgets/executors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/widgets/history-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/widgets/launch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/widgets/retry-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/widgets/severity.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/widgets/status-chart.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/widgets/suites.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10/widgets/summary.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/data/attachments/aa56c33f39ec4f09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/data/attachments/b515225e56dd6a66.uri" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/data/behaviors.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/data/behaviors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/data/categories.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/data/categories.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/data/packages.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/data/suites.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/data/suites.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/data/test-cases/201c05dd6cdab764.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/data/timeline.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/export/influxDbData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/export/mail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/export/prometheusData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/history/categories-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/history/duration-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/history/history-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/history/history.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/history/retry-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/plugin/behaviors/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/plugin/packages/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/plugin/screen-diff/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/plugin/screen-diff/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/widgets/behaviors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/widgets/categories-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/widgets/categories.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/widgets/duration-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/widgets/duration.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/widgets/environment.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/widgets/executors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/widgets/history-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/widgets/launch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/widgets/retry-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/widgets/severity.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/widgets/status-chart.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/widgets/suites.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/8/widgets/summary.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/data/attachments/bfbab6fb358cd689.uri" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/data/attachments/f771305f4189590a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/data/behaviors.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/data/behaviors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/data/categories.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/data/categories.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/data/packages.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/data/suites.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/data/suites.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/data/test-cases/ec59b717c3c87c89.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/data/test-cases/f2e3a58ccd381688.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/data/timeline.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/export/influxDbData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/export/mail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/export/prometheusData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/history/categories-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/history/duration-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/history/history-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/history/history.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/history/retry-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/plugin/behaviors/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/plugin/packages/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/plugin/screen-diff/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/plugin/screen-diff/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/widgets/behaviors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/widgets/categories-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/widgets/categories.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/widgets/duration-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/widgets/duration.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/widgets/environment.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/widgets/executors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/widgets/history-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/widgets/launch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/widgets/retry-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/widgets/severity.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/widgets/status-chart.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/widgets/suites.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/9/widgets/summary.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/last-history/categories-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/last-history/duration-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/last-history/history-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/last-history/history.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/last-history/retry-trend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cfg.py" beforeDir="false" afterPath="$PROJECT_DIR$/cfg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/slack_test_result_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/slack_test_result_script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/base_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index_page/index_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index_page/index_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_request_call.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_request_call.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -159,12 +44,116 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Python tests.Python tests for test_request_call.TestBookimed.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_request_call.TestBookimed.test_order_for_clinic.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_request_call.TestBookimed.test_order_for_procedure.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_request_call.TestBookimed.test_order_from_homepage.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_request_call.TestBookimed.test_request_call.executor&quot;: &quot;Run&quot;,
+    &quot;Python.result.executor&quot;: &quot;Run&quot;,
+    &quot;Python.slack_test_result_script.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/macbook/Documents/qa_bookimed&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="Python tests for test_request_call.TestBookimed" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Python tests for test_request_call.TestBookimed.test_order_from_homepage">
+    <configuration name="result" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="qa_bookimed" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sandbox" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sandbox/result.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="slack_test_result_script" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="qa_bookimed" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/slack_test_result_script.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_request_call.TestBookimed.test_order_for_clinic" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="qa_bookimed" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (qa_bookimed)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_request_call.TestBookimed.test_order_for_clinic&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_request_call.TestBookimed.test_order_for_procedure" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="qa_bookimed" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (qa_bookimed)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_request_call.TestBookimed.test_order_for_procedure&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_request_call.TestBookimed.test_order_from_homepage" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="qa_bookimed" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (qa_bookimed)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_request_call.TestBookimed.test_order_from_homepage&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_request_call.TestBookimed.test_request_call" type="tests" factoryName="Autodetect" nameIsGenerated="true">
       <module name="qa_bookimed" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -175,13 +164,51 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_request_call.TestBookimed&quot;" />
+      <option name="_new_target" value="&quot;test_request_call.TestBookimed.test_request_call&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Autodetect">
+      <module name="qa_bookimed" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (qa_bookimed)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <module name="qa_bookimed" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (qa_bookimed)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_request_call.TestBookimed" />
+        <item itemvalue="Python tests.Python tests for test_request_call.TestBookimed.test_order_from_homepage" />
+        <item itemvalue="Python tests.Python tests for test_request_call.TestBookimed.test_order_for_clinic" />
+        <item itemvalue="Python tests.Python tests for test_request_call.TestBookimed.test_order_for_procedure" />
+        <item itemvalue="Python.slack_test_result_script" />
+        <item itemvalue="Python.result" />
       </list>
     </recent_temporary>
   </component>
@@ -209,11 +236,344 @@
       <option name="project" value="LOCAL" />
       <updated>1719600124511</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="push">
+      <option name="closed" value="true" />
+      <created>1719600473807</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1719600473807</updated>
+    </task>
+    <task id="LOCAL-00003" summary="push">
+      <option name="closed" value="true" />
+      <created>1719600684646</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719600684646</updated>
+    </task>
+    <task id="LOCAL-00004" summary="push">
+      <option name="closed" value="true" />
+      <created>1719600890715</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719600890715</updated>
+    </task>
+    <task id="LOCAL-00005" summary="push">
+      <option name="closed" value="true" />
+      <created>1719604748441</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719604748441</updated>
+    </task>
+    <task id="LOCAL-00006" summary="push">
+      <option name="closed" value="true" />
+      <created>1719604817721</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719604817721</updated>
+    </task>
+    <task id="LOCAL-00007" summary="push">
+      <option name="closed" value="true" />
+      <created>1719605527285</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1719605527285</updated>
+    </task>
+    <task id="LOCAL-00008" summary="push">
+      <option name="closed" value="true" />
+      <created>1719605845421</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1719605845421</updated>
+    </task>
+    <task id="LOCAL-00009" summary="push">
+      <option name="closed" value="true" />
+      <created>1719606160942</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1719606160942</updated>
+    </task>
+    <task id="LOCAL-00010" summary="push">
+      <option name="closed" value="true" />
+      <created>1719606432391</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1719606432391</updated>
+    </task>
+    <task id="LOCAL-00011" summary="push">
+      <option name="closed" value="true" />
+      <created>1719606755750</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1719606755750</updated>
+    </task>
+    <task id="LOCAL-00012" summary="push">
+      <option name="closed" value="true" />
+      <created>1719606934354</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1719606934354</updated>
+    </task>
+    <task id="LOCAL-00013" summary="push">
+      <option name="closed" value="true" />
+      <created>1719607247508</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1719607247508</updated>
+    </task>
+    <task id="LOCAL-00014" summary="push">
+      <option name="closed" value="true" />
+      <created>1719607744097</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1719607744097</updated>
+    </task>
+    <task id="LOCAL-00015" summary="push">
+      <option name="closed" value="true" />
+      <created>1719608201254</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1719608201254</updated>
+    </task>
+    <task id="LOCAL-00016" summary="push">
+      <option name="closed" value="true" />
+      <created>1719608582984</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1719608582984</updated>
+    </task>
+    <task id="LOCAL-00017" summary="push">
+      <option name="closed" value="true" />
+      <created>1719608662867</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1719608662867</updated>
+    </task>
+    <task id="LOCAL-00018" summary="push">
+      <option name="closed" value="true" />
+      <created>1719608799163</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1719608799163</updated>
+    </task>
+    <task id="LOCAL-00019" summary="lsat fix">
+      <option name="closed" value="true" />
+      <created>1719647211679</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1719647211679</updated>
+    </task>
+    <task id="LOCAL-00020" summary="lsat fix">
+      <option name="closed" value="true" />
+      <created>1719647548578</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1719647548578</updated>
+    </task>
+    <task id="LOCAL-00021" summary="lsat fix">
+      <option name="closed" value="true" />
+      <created>1719647974039</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1719647974039</updated>
+    </task>
+    <task id="LOCAL-00022" summary="add copy step">
+      <option name="closed" value="true" />
+      <created>1719648557868</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1719648557868</updated>
+    </task>
+    <task id="LOCAL-00023" summary="add copy step">
+      <option name="closed" value="true" />
+      <created>1719648829713</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1719648829713</updated>
+    </task>
+    <task id="LOCAL-00024" summary="add copy step">
+      <option name="closed" value="true" />
+      <created>1719649158172</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1719649158172</updated>
+    </task>
+    <task id="LOCAL-00025" summary="add copy step">
+      <option name="closed" value="true" />
+      <created>1719651332579</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1719651332579</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Add slack script">
+      <option name="closed" value="true" />
+      <created>1719653671480</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1719653671480</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Add slack script">
+      <option name="closed" value="true" />
+      <created>1719654523154</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1719654523154</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Add slack script">
+      <option name="closed" value="true" />
+      <created>1719655732353</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1719655732353</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Add slack script">
+      <option name="closed" value="true" />
+      <created>1719655966245</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1719655966245</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Add slack script">
+      <option name="closed" value="true" />
+      <created>1719656159863</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1719656159863</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Add slack script">
+      <option name="closed" value="true" />
+      <created>1719656588445</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1719656588445</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Add slack script">
+      <option name="closed" value="true" />
+      <created>1719656713507</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1719656713507</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Add slack script">
+      <option name="closed" value="true" />
+      <created>1719656814635</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1719656814635</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Add slack script">
+      <option name="closed" value="true" />
+      <created>1719656887339</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1719656887339</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Add slack script">
+      <option name="closed" value="true" />
+      <created>1719657661783</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1719657661783</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Add slack script">
+      <option name="closed" value="true" />
+      <created>1719658032400</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1719658032400</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Add slack script">
+      <option name="closed" value="true" />
+      <created>1719658103638</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1719658103638</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Add slack script">
+      <option name="closed" value="true" />
+      <created>1719658535657</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1719658535657</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Add slack script">
+      <option name="closed" value="true" />
+      <created>1719658842677</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1719658842677</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Add slack script">
+      <option name="closed" value="true" />
+      <created>1719661953309</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1719661953309</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="push" />
-    <option name="LAST_COMMIT_MESSAGE" value="push" />
+    <MESSAGE value="lsat fix" />
+    <MESSAGE value="add copy step" />
+    <MESSAGE value="Add slack script" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add slack script" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="tests">
+        <watch expression="page" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
