@@ -36,6 +36,11 @@ class OrderForm(BasePage):
     locRequestCallStepTitle: str = "//div[contains(text(), 'Your request is almost ready!')]"
     locPhoneInput: str = "//input[@name='phone']"
     locVerifyPhoneBtn: str = "//button[contains(@class,'phone__button phone')]"
+    locVerifyPhoneStepTitle: str = "//div[text()='Please verify your phone number']"
+    locSmsCodeInput: str = "//input[@type='tel']"
+    locVerifyThxStepTitle: str = "//div[contains(text(), 'Choose the best way to manage and get updates on your requests')]"
+    locPhoneSelector: str = "//*[@aria-label='Country Code Selector']"
+    locSelectorCountry: str = "//strong[contains(text(), '{}')]"
 
     def __init__(self, page):
         super().__init__(page)
@@ -86,3 +91,12 @@ class OrderForm(BasePage):
 
     def input_phone(self, phone):
         self.page.locator(self.locPhoneInput).fill(phone)
+
+    @step("Выбираем телефонный код страны")
+    def select_country_code(self, country):
+        self.page.locator(self.locPhoneSelector).click()
+        self.page.locator(self.locSelectorCountry.format(country)).click()
+
+    def input_sms_code(self, sms_code):
+        self.page.locator(self.locSmsCodeInput).fill(sms_code)
+        self.page.locator(self.locConfirmFormBtn).click()

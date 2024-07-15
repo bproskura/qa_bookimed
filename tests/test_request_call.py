@@ -23,6 +23,8 @@ class TestBookimed:
             index_page.scroll_to_the_form()
 
         with allure.step("Вводим контактные данные"):
+            order_form.page.wait_for_timeout(3000)
+            order_form.select_country_code("Ukraine")
             index_page.insert_phone(cfg.PHONE)
             index_page.select_contact_messenger()
             index_page.insert_name("teratst")
@@ -71,8 +73,14 @@ class TestBookimed:
             expect(order_form.page.locator(order_form.locChooseCountryStepTitle)).to_be_visible()
             order_form.click_on_country_answer("Ukraine")
             expect(order_form.page.locator(order_form.locRequestCallStepTitle)).to_be_visible()
+            order_form.page.wait_for_timeout(3000)
+            order_form.select_country_code("Ukraine")
             order_form.input_phone(cfg.PHONE)
+            order_form.page.wait_for_timeout(20000)
             order_form.page.locator(order_form.locVerifyPhoneBtn).click()
+            expect(order_form.page.locator(order_form.locVerifyPhoneStepTitle)).to_be_visible()
+            order_form.input_sms_code(cfg.SMS_CODE)
+            expect(order_form.page.locator(order_form.locVerifyThxStepTitle)).to_be_visible()
 
     @allure.title("Форма 'Процедура' + клиника (без фото)")
     def test_order_for_procedure(self, page: Page):
