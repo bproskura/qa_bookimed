@@ -18,7 +18,7 @@ jobs:
           status: starting
           channel: 'automation_result'
           message: |
-            _Starting API Tests..._ 
+            _Starting Bookimed Tests..._ 
             *Workflow URL:* https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
         if: always()
 
