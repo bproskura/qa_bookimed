@@ -66,7 +66,8 @@ class TestBookimed:
         with allure.step("Извлекаем order_id из URL и проверяем диапазон"):
             current_url = page.url
             page.wait_for_timeout(5000)
-            assert order_id_manager.validate_order_id(current_url, "test_order_from_homepage") is True
+            assert order_id_manager.validate_order_id(
+                current_url, "test_order_from_homepage") is True, "Order id in fake range"
             # order_form.page.wait_for_timeout(5000)
             # order_form.input_sms_code(cfg.SMS_CODE)
             # expect(order_form.page.locator(order_form.locVerifyThxStepTitle)).to_be_visible()
@@ -119,7 +120,8 @@ class TestBookimed:
             with allure.step("Извлекаем order_id из URL и проверяем диапазон"):
                 current_url = page.url
                 page.wait_for_timeout(5000)
-                assert order_id_manager.validate_order_id(current_url, "test_order_for_clinic") is True
+                assert order_id_manager.validate_order_id(
+                    current_url, "test_order_for_clinic") is True, "Order id in fake range"
 
             # order_form.input_sms_code(cfg.SMS_CODE)
             # expect(order_form.page.locator(order_form.locVerifyThxStepTitle)).to_be_visible()
@@ -183,4 +185,5 @@ class TestBookimed:
             with allure.step("Извлекаем order_id из URL и проверяем диапазон"):
                 current_url = page.url
                 page.wait_for_timeout(5000)
-                assert order_id_manager.validate_order_id(current_url, "test_order_for_procedure") is True
+                assert order_id_manager.validate_order_id(
+                    current_url, "test_order_for_procedure") is True, "Order id in fake range"

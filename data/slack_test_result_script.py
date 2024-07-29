@@ -99,8 +99,8 @@ if __name__ == "__main__":
     print(f"Current working directory: {os.getcwd()}")
 
     # Обновленные абсолютные пути
-    results_file_path = 'results/test-results.xml'
-    order_ids_file_path = 'results/order_ids.xml'
+    results_file_path = '../results/test-results.xml'
+    order_ids_file_path = '../results/order_ids.xml'
 
     print(f"Results file absolute path: {os.path.abspath(results_file_path)}")
     print(f"Order IDs file absolute path: {os.path.abspath(order_ids_file_path)}")

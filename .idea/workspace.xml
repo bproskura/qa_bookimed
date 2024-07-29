@@ -53,7 +53,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_request_call.TestBookimed.test_order_for_procedure">
+  <component name="RunManager" selected="Python.slack_test_result_script">
     <configuration name="order_id_manager" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="qa_bookimed" />
       <option name="ENV_FILES" value="" />
@@ -197,8 +197,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_request_call.TestBookimed.test_order_for_procedure" />
         <item itemvalue="Python.slack_test_result_script" />
+        <item itemvalue="Python tests.Python tests for test_request_call.TestBookimed.test_order_for_procedure" />
         <item itemvalue="Python tests.Python tests for test_request_call.TestBookimed.test_order_from_homepage" />
         <item itemvalue="Python.order_id_manager" />
         <item itemvalue="Python tests.Python tests for test_request_call.TestBookimed.test_order_for_clinic" />
@@ -605,7 +605,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722284594500</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Add parser for Order ID">
+      <option name="closed" value="true" />
+      <created>1722285547710</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1722285547710</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
