@@ -116,7 +116,7 @@ class TestBookimed:
             order_form.input_phone(cfg.PHONE)
             order_form.page.locator(order_form.locVerifyPhoneBtn).click()
             expect(order_form.page
-                   .locator(order_form.locVerifyPhoneStepTitle)).to_be_visible(cfg.WAIT_PAGE_LOAD_TIMEOUT)
+                   .locator(order_form.locVerifyPhoneStepTitle)).to_be_visible(timeout=cfg.WAIT_PAGE_LOAD_TIMEOUT)
             with allure.step("Извлекаем order_id из URL и проверяем диапазон"):
                 current_url = page.url
                 page.wait_for_timeout(5000)
