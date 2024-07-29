@@ -1,4 +1,4 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"failed","Mon Jul 29 20:41:52 GMT 2024","Mon Jul 29 20:42:26 GMT 2024","34162","Bookimed","Заповнення форм","TestBookimed","","","Открытая форма на главной",""
-"broken","Mon Jul 29 20:44:36 GMT 2024","Mon Jul 29 20:44:58 GMT 2024","22417","Bookimed","Заповнення форм","TestBookimed","","","Форма 'Request a call' на 435-ю клинику",""
-"passed","Mon Jul 29 20:47:09 GMT 2024","Mon Jul 29 20:47:56 GMT 2024","47457","Bookimed","Заповнення форм","TestBookimed","","","Форма 'Процедура' + клиника (без фото)",""
+"failed","Mon Jul 29 21:01:22 GMT 2024","Mon Jul 29 21:02:07 GMT 2024","45295","Bookimed","Заповнення форм","TestBookimed","","","Форма 'Процедура' + клиника (без фото)",""
+"failed","Mon Jul 29 20:58:39 GMT 2024","Mon Jul 29 20:59:11 GMT 2024","32227","Bookimed","Заповнення форм","TestBookimed","","","Форма 'Request a call' на 435-ю клинику",""
+"failed","Mon Jul 29 20:55:55 GMT 2024","Mon Jul 29 20:56:29 GMT 2024","34352","Bookimed","Заповнення форм","TestBookimed","","","Открытая форма на главной",""
