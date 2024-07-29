@@ -114,3 +114,5 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         run: python data/slack_test_result_script.py
         if: always()
+      - name: List files in results directory
+        run: ls -l /home/runner/work/qa_bookimed/qa_bookimed/results
