@@ -59,13 +59,13 @@ class TestBookimed:
             index_page.click_terms_checkbox()
             order_form.page.wait_for_timeout(3000)
             index_page.click_send_request_btn()
-            order_form.page.wait_for_timeout(3000)
 
         with allure.step("Проверяем отображение формы ввода смс"):
             expect(order_form.page.locator(order_form.locConfirmPhoneStepTitle)).to_be_visible(
                 timeout=cfg.WAIT_PAGE_LOAD_TIMEOUT)
         with allure.step("Извлекаем order_id из URL и проверяем диапазон"):
             current_url = page.url
+            page.wait_for_timeout(5000)
             assert order_id_manager.validate_order_id(current_url, "test_order_from_homepage") is True
             # order_form.page.wait_for_timeout(5000)
             # order_form.input_sms_code(cfg.SMS_CODE)
@@ -83,7 +83,8 @@ class TestBookimed:
             index_page.click_btn(index_page.locRequestCallBtn)
 
         with allure.step("Заполняем форму"):
-            expect(order_form.page.locator(order_form.locChooseSpecialityStepTitle)).to_be_visible()
+            expect(order_form.page
+                   .locator(order_form.locChooseSpecialityStepTitle)).to_be_visible(timeout=cfg.WAIT_PAGE_LOAD_TIMEOUT)
             order_form.click_on_speciality("Plastic Surgery")
             expect(order_form.page.locator(order_form.locImproveQuestionStepTitle)).to_be_visible()
             order_form.click_on_improve_question("A nose")
@@ -113,10 +114,11 @@ class TestBookimed:
             order_form.select_country_code("Ukraine")
             order_form.input_phone(cfg.PHONE)
             order_form.page.locator(order_form.locVerifyPhoneBtn).click()
-            order_form.page.wait_for_timeout(5000)
-            expect(order_form.page.locator(order_form.locVerifyPhoneStepTitle)).to_be_visible()
+            expect(order_form.page
+                   .locator(order_form.locVerifyPhoneStepTitle)).to_be_visible(cfg.WAIT_PAGE_LOAD_TIMEOUT)
             with allure.step("Извлекаем order_id из URL и проверяем диапазон"):
                 current_url = page.url
+                page.wait_for_timeout(5000)
                 assert order_id_manager.validate_order_id(current_url, "test_order_for_clinic") is True
 
             # order_form.input_sms_code(cfg.SMS_CODE)
@@ -175,9 +177,10 @@ class TestBookimed:
             order_form.select_country_code("Ukraine")
             order_form.input_phone(cfg.PHONE)
             order_form.page.locator(order_form.locVerifyViaSmsBtn).click()
-            order_form.page.wait_for_timeout(5000)
-            expect(order_form.page.locator(order_form.locVerifyPhoneStepTitle)).to_be_visible()
+            expect(order_form.page
+                   .locator(order_form.locVerifyPhoneStepTitle)).to_be_visible(timeout=cfg.WAIT_PAGE_LOAD_TIMEOUT)
 
             with allure.step("Извлекаем order_id из URL и проверяем диапазон"):
                 current_url = page.url
+                page.wait_for_timeout(5000)
                 assert order_id_manager.validate_order_id(current_url, "test_order_for_procedure") is True

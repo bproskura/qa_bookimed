@@ -7,6 +7,7 @@
     <list default="true" id="5c2009a0-3fb1-46c2-b290-679ab379c491" name="Changes" comment="Add parser for Order ID">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/slack_test_result_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/slack_test_result_script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_request_call.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_request_call.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +53,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.slack_test_result_script">
+  <component name="RunManager" selected="Python tests.Python tests for test_request_call.TestBookimed.test_order_for_procedure">
     <configuration name="order_id_manager" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="qa_bookimed" />
       <option name="ENV_FILES" value="" />
@@ -196,9 +197,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_request_call.TestBookimed.test_order_for_procedure" />
         <item itemvalue="Python.slack_test_result_script" />
         <item itemvalue="Python tests.Python tests for test_request_call.TestBookimed.test_order_from_homepage" />
-        <item itemvalue="Python tests.Python tests for test_request_call.TestBookimed.test_order_for_procedure" />
         <item itemvalue="Python.order_id_manager" />
         <item itemvalue="Python tests.Python tests for test_request_call.TestBookimed.test_order_for_clinic" />
       </list>
@@ -596,7 +597,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722283684300</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Add parser for Order ID">
+      <option name="closed" value="true" />
+      <created>1722284594500</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1722284594500</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

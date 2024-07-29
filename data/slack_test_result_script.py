@@ -9,6 +9,7 @@ import xml.etree.ElementTree as ET
 import requests
 import cfg
 
+
 def extract_order_ids(file_path):
     try:
         print(f"Extracting order IDs from {file_path}")  # Debug info
@@ -27,6 +28,7 @@ def extract_order_ids(file_path):
     except ET.ParseError as e:
         print(f"Ошибка парсинга XML файла: {e}")
         return {}
+
 
 def extract_test_results(file_path):
     try:
@@ -55,6 +57,7 @@ def extract_test_results(file_path):
     except ET.ParseError as e:
         print(f"Ошибка парсинга XML файла: {e}")
         return 0, 0, [], []
+
 
 def send_slack_message(webhook_url, total_tests, total_failures, failed_tests, passed_tests, order_ids):
     headers = {'Content-Type': 'application/json'}
@@ -91,6 +94,7 @@ def send_slack_message(webhook_url, total_tests, total_failures, failed_tests, p
     else:
         print("Сообщение в Slack отправлено успешно!")
 
+
 if __name__ == "__main__":
     print(f"Current working directory: {os.getcwd()}")
 
@@ -116,4 +120,3 @@ if __name__ == "__main__":
     webhook_url = cfg.SLACK_WEBHOOK
 
     send_slack_message(webhook_url, total_tests, total_failures, failed_tests, passed_tests, order_ids)
-

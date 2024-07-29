@@ -50,7 +50,6 @@ class OrderIDManager:
         match = re.search(r"/confirm-order/(\d+)/", page_url)
         if match:
             order_id = match.group(1)
-            logging.info(f"Order ID extracted: {order_id}")
             self.update_order_id(test_name, order_id)
             if 700000 <= int(order_id) <= 701000:
                 return False
