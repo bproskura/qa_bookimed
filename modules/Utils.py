@@ -47,3 +47,5 @@ class ColorDetector:
 
 def get_color(color: str) -> str:
     return ColorDetector().get_main_color(color)
+
+

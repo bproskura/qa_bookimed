@@ -45,7 +45,7 @@ class OrderForm(BasePage):
         "//div[contains(text(), 'Choose the best way to manage and get updates on your requests')]"
     locPhoneSelector: str = "//*[@aria-label='Country Code Selector']"
     locSelectorCountry: str = "//strong[contains(text(), '{}')]"
-    locRhinoplastyStepTitle: str = "//*[contains(text(),'Are you seeking rhinoplasty')]"
+    locRhinoplastyStepTitle: str = "//*[contains(text(),'Are you interested in rhinoplasty')]"
     locRhinoplastyBtn: str = "//span[contains(text(),'{}')]"
     locRhinoplastyReasonStepTitle: str = \
         "//div[contains(text(),'What is your personal reason for considering a rhinoplasty?')]"

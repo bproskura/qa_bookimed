@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c2009a0-3fb1-46c2-b290-679ab379c491" name="Changes" comment="Fix action yml">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/chrome.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/chrome.yml" afterDir="false" />
+    <list default="true" id="5c2009a0-3fb1-46c2-b290-679ab379c491" name="Changes" comment="Adding fixture + new test">
+      <change afterPath="$PROJECT_DIR$/data/order_id_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/slack_test_result_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/slack_test_result_script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/order_form/order_form.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/order_form/order_form.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/procedure_page/procedure_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/procedure_page/procedure_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_request_call.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_request_call.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +43,7 @@
     "Python tests.Python tests for test_request_call.TestBookimed.test_order_for_procedure.executor": "Run",
     "Python tests.Python tests for test_request_call.TestBookimed.test_order_from_homepage.executor": "Run",
     "Python tests.Python tests for test_request_call.TestBookimed.test_request_call.executor": "Run",
+    "Python.order_id_manager.executor": "Run",
     "Python.result.executor": "Run",
     "Python.slack_test_result_script.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -54,8 +56,8 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_request_call.TestBookimed.test_order_for_clinic">
-    <configuration name="result" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.slack_test_result_script">
+    <configuration name="order_id_manager" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="qa_bookimed" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -64,11 +66,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sandbox" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sandbox/result.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/order_id_manager.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -198,11 +200,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_request_call.TestBookimed.test_order_for_clinic" />
+        <item itemvalue="Python.slack_test_result_script" />
         <item itemvalue="Python tests.Python tests for test_request_call.TestBookimed.test_order_from_homepage" />
         <item itemvalue="Python tests.Python tests for test_request_call.TestBookimed.test_order_for_procedure" />
-        <item itemvalue="Python.slack_test_result_script" />
-        <item itemvalue="Python.result" />
+        <item itemvalue="Python.order_id_manager" />
+        <item itemvalue="Python tests.Python tests for test_request_call.TestBookimed.test_order_for_clinic" />
       </list>
     </recent_temporary>
   </component>
@@ -574,7 +576,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721072885118</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Adding fixture + new test">
+      <option name="closed" value="true" />
+      <created>1721249184087</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1721249184087</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -595,7 +605,8 @@
     <MESSAGE value="Add slack script" />
     <MESSAGE value="Add new tests" />
     <MESSAGE value="Fix action yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix action yml" />
+    <MESSAGE value="Adding fixture + new test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding fixture + new test" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

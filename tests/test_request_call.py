@@ -1,9 +1,11 @@
+import os
 import allure
 import pytest
 import time
 from playwright.sync_api import Page, expect
 
 import cfg
+from data import order_id_manager
 from src.pages.index_page.index_page import IndexPage
 from src.pages.order_form.order_form import OrderForm
 from src.pages.procedure_page.procedure_page import ProcedurePage
@@ -13,6 +15,18 @@ from src.pages.procedure_page.procedure_page import ProcedurePage
 def delay_between_tests():
     yield
     time.sleep(130)
+
+
+order_ids_file = os.path.join('results', 'order_ids.xml')
+order_id_manager = order_id_manager.OrderIDManager(order_ids_file)
+
+
+@pytest.fixture(scope='function', autouse=True)
+def setup_and_teardown():
+    # Создаем папку, если она не существует
+    if not os.path.exists('results'):
+        os.makedirs('results')
+    yield
 
 
 @allure.parent_suite("Bookimed")
@@ -33,17 +47,27 @@ class TestBookimed:
         with allure.step("Вводим контактные данные"):
             order_form.page.wait_for_timeout(3000)
             order_form.select_country_code("Ukraine")
+            order_form.page.wait_for_timeout(3000)
             index_page.insert_phone(cfg.PHONE)
+            order_form.page.wait_for_timeout(3000)
             index_page.select_contact_messenger()
+            order_form.page.wait_for_timeout(3000)
             index_page.insert_name("teratst")
+            order_form.page.wait_for_timeout(3000)
             index_page.insert_description("test")
+            order_form.page.wait_for_timeout(3000)
             index_page.click_terms_checkbox()
+            order_form.page.wait_for_timeout(3000)
             index_page.click_send_request_btn()
+            order_form.page.wait_for_timeout(3000)
 
         with allure.step("Проверяем отображение формы ввода смс"):
             expect(order_form.page.locator(order_form.locConfirmPhoneStepTitle)).to_be_visible(
                 timeout=cfg.WAIT_PAGE_LOAD_TIMEOUT)
-            order_form.page.wait_for_timeout(5000)
+        with allure.step("Извлекаем order_id из URL и проверяем диапазон"):
+            current_url = page.url
+            assert order_id_manager.validate_order_id(current_url, "test_order_from_homepage") is True
+            # order_form.page.wait_for_timeout(5000)
             # order_form.input_sms_code(cfg.SMS_CODE)
             # expect(order_form.page.locator(order_form.locVerifyThxStepTitle)).to_be_visible()
 
@@ -91,6 +115,10 @@ class TestBookimed:
             order_form.page.locator(order_form.locVerifyPhoneBtn).click()
             order_form.page.wait_for_timeout(5000)
             expect(order_form.page.locator(order_form.locVerifyPhoneStepTitle)).to_be_visible()
+            with allure.step("Извлекаем order_id из URL и проверяем диапазон"):
+                current_url = page.url
+                assert order_id_manager.validate_order_id(current_url, "test_order_for_clinic") is True
+
             # order_form.input_sms_code(cfg.SMS_CODE)
             # expect(order_form.page.locator(order_form.locVerifyThxStepTitle)).to_be_visible()
 
@@ -150,6 +178,6 @@ class TestBookimed:
             order_form.page.wait_for_timeout(5000)
             expect(order_form.page.locator(order_form.locVerifyPhoneStepTitle)).to_be_visible()
 
-
-
-
+            with allure.step("Извлекаем order_id из URL и проверяем диапазон"):
+                current_url = page.url
+                assert order_id_manager.validate_order_id(current_url, "test_order_for_procedure") is True
