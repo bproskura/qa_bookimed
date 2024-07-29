@@ -1,1 +1,0 @@
-INFO     root:order_id_manager.py:53 Order ID extracted: 700603
