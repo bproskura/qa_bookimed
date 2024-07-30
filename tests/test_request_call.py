@@ -48,7 +48,7 @@ class TestBookimed:
             order_form.page.wait_for_timeout(3000)
             order_form.select_country_code("Ukraine")
             order_form.page.wait_for_timeout(3000)
-            index_page.insert_phone(cfg.PHONE)
+            index_page.insert_phone("+380691231232")
             order_form.page.wait_for_timeout(3000)
             index_page.select_contact_messenger()
             order_form.page.wait_for_timeout(3000)
@@ -60,17 +60,17 @@ class TestBookimed:
             order_form.page.wait_for_timeout(3000)
             index_page.click_send_request_btn()
 
-        with allure.step("Проверяем отображение формы ввода смс"):
-            expect(order_form.page.locator(order_form.locConfirmPhoneStepTitle)).to_be_visible(
-                timeout=cfg.WAIT_PAGE_LOAD_TIMEOUT)
-        with allure.step("Извлекаем order_id из URL и проверяем диапазон"):
-            current_url = page.url
-            page.wait_for_timeout(5000)
-            assert order_id_manager.validate_order_id(
-                current_url, "test_order_from_homepage") is True, "Order id in fake range"
-            # order_form.page.wait_for_timeout(5000)
-            # order_form.input_sms_code(cfg.SMS_CODE)
-            # expect(order_form.page.locator(order_form.locVerifyThxStepTitle)).to_be_visible()
+            with allure.step("Проверяем отображение формы ввода смс"):
+                expect(order_form.page.locator(order_form.locConfirmPhoneStepTitle)).to_be_visible(
+                    timeout=cfg.WAIT_PAGE_LOAD_TIMEOUT)
+            with allure.step("Извлекаем order_id из URL и проверяем диапазон"):
+                current_url = page.url
+                page.wait_for_timeout(5000)
+                assert order_id_manager.validate_order_id(
+                    current_url, "test_order_from_homepage") is True, "Order id in fake range"
+                # order_form.page.wait_for_timeout(5000)
+                # order_form.input_sms_code(cfg.SMS_CODE)
+                # expect(order_form.page.locator(order_form.locVerifyThxStepTitle)).to_be_visible()
 
     @allure.title("Форма 'Request a call' на 435-ю клинику")
     def test_order_for_clinic(self, page: Page, fake):
@@ -113,7 +113,7 @@ class TestBookimed:
             expect(order_form.page.locator(order_form.locRequestCallStepTitle)).to_be_visible()
             order_form.page.wait_for_timeout(3000)
             order_form.select_country_code("Ukraine")
-            order_form.input_phone(cfg.PHONE)
+            order_form.input_phone("+380691231233")
             order_form.page.locator(order_form.locVerifyPhoneBtn).click()
             expect(order_form.page
                    .locator(order_form.locVerifyPhoneStepTitle)).to_be_visible(timeout=cfg.WAIT_PAGE_LOAD_TIMEOUT)
@@ -177,7 +177,7 @@ class TestBookimed:
                    .locator(order_form.locRequestCallStepTitle)).to_be_visible(timeout=cfg.WAIT_MAX_PAGE_LOAD_TIMEOUT)
             order_form.page.wait_for_timeout(3000)
             order_form.select_country_code("Ukraine")
-            order_form.input_phone(cfg.PHONE)
+            order_form.input_phone("+380691231234")
             order_form.page.locator(order_form.locVerifyViaSmsBtn).click()
             expect(order_form.page
                    .locator(order_form.locVerifyPhoneStepTitle)).to_be_visible(timeout=cfg.WAIT_PAGE_LOAD_TIMEOUT)

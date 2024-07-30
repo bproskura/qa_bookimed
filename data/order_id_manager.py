@@ -3,6 +3,8 @@ import os
 import xml.etree.ElementTree as ET
 import re
 
+import allure
+
 
 class OrderIDManager:
     def __init__(self, file_path):
@@ -39,6 +41,7 @@ class OrderIDManager:
         root = tree.getroot()
         return {elem.get('test_name'): elem.get('order_id') for elem in root.findall('order')}
 
+    @allure.step("Проверяем Order ID")
     def validate_order_id(self, page_url: str, test_name: str) -> bool:
         """
         Проверяет, что Order ID не попадает в диапазон 700000-701000 и обновляет order_id_manager.
