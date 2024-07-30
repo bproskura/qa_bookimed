@@ -33,21 +33,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests for test_request_call.TestBookimed.executor": "Run",
-    "Python tests.Python tests for test_request_call.TestBookimed.test_order_for_clinic.executor": "Run",
-    "Python tests.Python tests for test_request_call.TestBookimed.test_order_for_procedure.executor": "Run",
-    "Python tests.Python tests for test_request_call.TestBookimed.test_order_from_homepage.executor": "Run",
-    "Python tests.Python tests for test_request_call.TestBookimed.test_request_call.executor": "Run",
-    "Python.order_id_manager.executor": "Run",
-    "Python.result.executor": "Run",
-    "Python.slack_test_result_script.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/macbook/Documents/qa_bookimed"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for test_request_call.TestBookimed.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_request_call.TestBookimed.test_order_for_clinic.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_request_call.TestBookimed.test_order_for_procedure.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_request_call.TestBookimed.test_order_from_homepage.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_request_call.TestBookimed.test_request_call.executor&quot;: &quot;Run&quot;,
+    &quot;Python.order_id_manager.executor&quot;: &quot;Run&quot;,
+    &quot;Python.result.executor&quot;: &quot;Run&quot;,
+    &quot;Python.slack_test_result_script.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/macbook/Documents/qa_bookimed&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
