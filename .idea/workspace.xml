@@ -219,14 +219,6 @@
       <option name="presentableId" value="Default" />
       <updated>1719045337830</updated>
     </task>
-    <task id="LOCAL-00008" summary="push">
-      <option name="closed" value="true" />
-      <created>1719605845421</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1719605845421</updated>
-    </task>
     <task id="LOCAL-00009" summary="push">
       <option name="closed" value="true" />
       <created>1719606160942</created>
@@ -611,7 +603,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722329172557</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Add parser for Order ID">
+      <option name="closed" value="true" />
+      <created>1722335902552</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1722335902552</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -637,15 +637,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Add parser for Order ID" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/test_request_call.py</url>
-          <line>68</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="tests">
         <watch expression="page" />
