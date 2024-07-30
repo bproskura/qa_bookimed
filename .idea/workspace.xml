@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5c2009a0-3fb1-46c2-b290-679ab379c491" name="Changes" comment="Add parser for Order ID">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/order_id_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/order_id_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_request_call.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_request_call.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +36,7 @@
     &quot;Python tests.Python tests for test_request_call.TestBookimed.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.Python tests for test_request_call.TestBookimed.test_order_for_clinic.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.Python tests for test_request_call.TestBookimed.test_order_for_procedure.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_request_call.TestBookimed.test_order_from_homepage.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_request_call.TestBookimed.test_order_from_homepage.executor&quot;: &quot;Debug&quot;,
     &quot;Python tests.Python tests for test_request_call.TestBookimed.test_request_call.executor&quot;: &quot;Run&quot;,
     &quot;Python.order_id_manager.executor&quot;: &quot;Run&quot;,
     &quot;Python.result.executor&quot;: &quot;Run&quot;,
@@ -220,22 +218,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719045337830</updated>
-    </task>
-    <task id="LOCAL-00006" summary="push">
-      <option name="closed" value="true" />
-      <created>1719604817721</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1719604817721</updated>
-    </task>
-    <task id="LOCAL-00007" summary="push">
-      <option name="closed" value="true" />
-      <created>1719605527285</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1719605527285</updated>
     </task>
     <task id="LOCAL-00008" summary="push">
       <option name="closed" value="true" />
@@ -613,7 +595,23 @@
       <option name="project" value="LOCAL" />
       <updated>1722287326150</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Add parser for Order ID">
+      <option name="closed" value="true" />
+      <created>1722329128873</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1722329128873</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Add parser for Order ID">
+      <option name="closed" value="true" />
+      <created>1722329172557</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1722329172557</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -639,6 +637,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="Add parser for Order ID" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_request_call.py</url>
+          <line>68</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="tests">
         <watch expression="page" />

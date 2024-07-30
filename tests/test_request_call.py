@@ -48,7 +48,7 @@ class TestBookimed:
             order_form.page.wait_for_timeout(3000)
             order_form.select_country_code("Ukraine")
             order_form.page.wait_for_timeout(3000)
-            index_page.insert_phone("+380691231232")
+            index_page.insert_phone(cfg.PHONE)
             order_form.page.wait_for_timeout(3000)
             index_page.select_contact_messenger()
             order_form.page.wait_for_timeout(3000)
@@ -113,7 +113,7 @@ class TestBookimed:
             expect(order_form.page.locator(order_form.locRequestCallStepTitle)).to_be_visible()
             order_form.page.wait_for_timeout(3000)
             order_form.select_country_code("Ukraine")
-            order_form.input_phone("+380691231233")
+            order_form.input_phone(cfg.PHONE)
             order_form.page.locator(order_form.locVerifyPhoneBtn).click()
             expect(order_form.page
                    .locator(order_form.locVerifyPhoneStepTitle)).to_be_visible(timeout=cfg.WAIT_PAGE_LOAD_TIMEOUT)
@@ -177,7 +177,7 @@ class TestBookimed:
                    .locator(order_form.locRequestCallStepTitle)).to_be_visible(timeout=cfg.WAIT_MAX_PAGE_LOAD_TIMEOUT)
             order_form.page.wait_for_timeout(3000)
             order_form.select_country_code("Ukraine")
-            order_form.input_phone("+380691231234")
+            order_form.input_phone(cfg.PHONE)
             order_form.page.locator(order_form.locVerifyViaSmsBtn).click()
             expect(order_form.page
                    .locator(order_form.locVerifyPhoneStepTitle)).to_be_visible(timeout=cfg.WAIT_PAGE_LOAD_TIMEOUT)
