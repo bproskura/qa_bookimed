@@ -1,1 +1,1 @@
-[]
+[{"uid":"9e879d31510524a3","name":"Форма 'Request a call' на 435-ю клинику","time":{"start":1722366380114,"stop":1722366412501,"duration":32387},"status":"failed","severity":"normal"},{"uid":"1e67b53fb245b2c5","name":"Открытая форма на главной","time":{"start":1722366215242,"stop":1722366249788,"duration":34546},"status":"failed","severity":"normal"},{"uid":"f7b06edbe4f700dc","name":"Форма 'Процедура' + клиника (без фото)","time":{"start":1722366542804,"stop":1722366588604,"duration":45800},"status":"failed","severity":"normal"}]
