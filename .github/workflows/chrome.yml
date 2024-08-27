@@ -1,7 +1,5 @@
 name: Bookimed tests
 on:
-  schedule:
-    - cron: "0 17 * * 6"
   workflow_dispatch:
   repository_dispatch:
     types: [ run_tests ]
