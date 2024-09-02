@@ -47,6 +47,10 @@ jobs:
         if: always()
         continue-on-error: true
 
+      - name: Copy Allure history
+        run: cp -R gh-pages/history allure-results/history || true
+        if: always()
+
       - name: Run your tests
         id: running_tests
         env:
@@ -55,10 +59,6 @@ jobs:
           DEFAULT_LOCALE: ${{ secrets.DEFAULT_LOCALE_2 }}
           BASE_URL: ${{ secrets.BASE_URL }}
         run: pytest --alluredir=allure-results --headless=True
-        if: always()
-
-      - name: Copy Allure history
-        run: cp -R gh-pages/allure-history allure-results/history || true
         if: always()
 
       - name: Upload Allure results as artifact
@@ -70,13 +70,21 @@ jobs:
           retention-days: 20
         if: always()
 
+      - name: Get Allure history
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+        if: always()
+        continue-on-error: true
+
       - name: Generate Allure Report
         uses: simple-elf/allure-report-action@master
         with:
           allure_results: allure-results
           allure_report: allure-report
           gh_pages: gh-pages
-          allure_history: allure-results/history
+          allure_history: gh-pages/allure-history
           keep_reports: 20
         if: always()
 
