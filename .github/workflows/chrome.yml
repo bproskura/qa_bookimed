@@ -51,6 +51,7 @@ jobs:
 
       - name: Load test report history
         uses: actions/checkout@v3
+        id: load_test_report_history
         if: always()
         continue-on-error: true
         with:
@@ -59,6 +60,7 @@ jobs:
 
       - name: Build test report
         uses: simple-elf/allure-report-action@v1.7
+        id: build_test_report
         if: always()
         with:
           gh_pages: gh-pages
@@ -67,6 +69,7 @@ jobs:
 
       - name: Publish test report
         uses: peaceiris/actions-gh-pages@v3
+        id: deploy_test_report_to_gh_pages
         if: always()
         with:
           github_token: ${{ secrets.HUB_TOKEN }}
