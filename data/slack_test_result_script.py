@@ -1,9 +1,14 @@
 import sys
 import os
+
+# Добавляем путь к каталогу с cfg.py
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import json
 import xml.etree.ElementTree as ET
 import requests
 import cfg
+
 
 def extract_order_ids(file_path):
     try:
@@ -23,6 +28,7 @@ def extract_order_ids(file_path):
     except ET.ParseError as e:
         print(f"Ошибка парсинга XML файла: {e}")
         return {}
+
 
 def extract_test_results(file_path):
     try:
@@ -52,6 +58,7 @@ def extract_test_results(file_path):
         print(f"Ошибка парсинга XML файла: {e}")
         return 0, 0, [], []
 
+
 def send_slack_message(webhook_url, total_tests, total_failures, failed_tests, passed_tests, order_ids):
     headers = {'Content-Type': 'application/json'}
 
@@ -62,24 +69,17 @@ def send_slack_message(webhook_url, total_tests, total_failures, failed_tests, p
         f"TOTAL TESTS = {total_tests}\n\n"
         f"TOTAL PASSED = {total_passed}\n\n"
         f"TOTAL FAILED = {total_failures}\n\n\n"
+        "*PASSED TESTS:*\n\n"
     )
 
-    if passed_tests:
-        message += "*PASSED TESTS:*\n\n"
-        for test in passed_tests:
-            order_id = order_ids.get(test, 'N/A')
-            message += f"   :white_check_mark: {test} (Order ID: {order_id})\n\n\n"
-    else:
-        message += "*PASSED TESTS:*\nN/A\n\n"
+    for test in passed_tests:
+        order_id = order_ids.get(test, 'N/A')
+        message += f"   :white_check_mark: {test} (Order ID: {order_id})\n\n\n"
 
-    if failed_tests:
-        message += "*FAILED TESTS:*\n\n"
-        for test in failed_tests:
-            order_id = order_ids.get(test, 'N/A')
-            message += f"   :x: {test} (Order ID: {order_id})\n\n"
-    else:
-        message += "*FAILED TESTS:*\nN/A\n\n"
-
+    message += "*FAILED TESTS:*\n\n"
+    for test in failed_tests:
+        order_id = order_ids.get(test, 'N/A')
+        message += f"   :x: {test} (Order ID: {order_id})\n\n"
     message += "───────────────────────────\n\n\n"
 
     payload = {
@@ -93,6 +93,7 @@ def send_slack_message(webhook_url, total_tests, total_failures, failed_tests, p
         print(f"Не удалось отправить сообщение в Slack: {response.status_code}, {response.text}")
     else:
         print("Сообщение в Slack отправлено успешно!")
+
 
 if __name__ == "__main__":
     print(f"Current working directory: {os.getcwd()}")

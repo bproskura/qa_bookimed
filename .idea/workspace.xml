@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c2009a0-3fb1-46c2-b290-679ab379c491" name="Changes" comment="Add parser for Order ID">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/chrome.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/chrome.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/slack_test_result_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/slack_test_result_script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_request_call.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_request_call.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,27 +34,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests for test_request_call.TestBookimed.executor": "Run",
-    "Python tests.Python tests for test_request_call.TestBookimed.test_order_for_clinic.executor": "Run",
-    "Python tests.Python tests for test_request_call.TestBookimed.test_order_for_procedure.executor": "Run",
-    "Python tests.Python tests for test_request_call.TestBookimed.test_order_from_homepage.executor": "Run",
-    "Python tests.Python tests for test_request_call.TestBookimed.test_request_call.executor": "Run",
-    "Python.order_id_manager.executor": "Run",
-    "Python.result.executor": "Run",
-    "Python.slack_test_result_script.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/macbook/Documents/qa_bookimed"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for test_request_call.TestBookimed.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_request_call.TestBookimed.test_order_for_clinic.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_request_call.TestBookimed.test_order_for_procedure.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_request_call.TestBookimed.test_order_from_homepage.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_request_call.TestBookimed.test_request_call.executor&quot;: &quot;Run&quot;,
+    &quot;Python.order_id_manager.executor&quot;: &quot;Run&quot;,
+    &quot;Python.result.executor&quot;: &quot;Run&quot;,
+    &quot;Python.slack_test_result_script.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/macbook/Documents/qa_bookimed&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_request_call.TestBookimed.test_order_from_homepage">
+  <component name="RunManager" selected="Python.slack_test_result_script">
     <configuration name="order_id_manager" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="qa_bookimed" />
       <option name="ENV_FILES" value="" />
@@ -195,8 +198,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_request_call.TestBookimed.test_order_from_homepage" />
         <item itemvalue="Python.slack_test_result_script" />
+        <item itemvalue="Python tests.Python tests for test_request_call.TestBookimed.test_order_from_homepage" />
         <item itemvalue="Python tests.Python tests for test_request_call.TestBookimed.test_order_for_procedure" />
         <item itemvalue="Python.order_id_manager" />
         <item itemvalue="Python tests.Python tests for test_request_call.TestBookimed.test_order_for_clinic" />
@@ -218,22 +221,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719045337830</updated>
-    </task>
-    <task id="LOCAL-00010" summary="push">
-      <option name="closed" value="true" />
-      <created>1719606432391</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1719606432391</updated>
-    </task>
-    <task id="LOCAL-00011" summary="push">
-      <option name="closed" value="true" />
-      <created>1719606755750</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1719606755750</updated>
     </task>
     <task id="LOCAL-00012" summary="push">
       <option name="closed" value="true" />
@@ -611,7 +598,23 @@
       <option name="project" value="LOCAL" />
       <updated>1722336898904</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Add parser for Order ID">
+      <option name="closed" value="true" />
+      <created>1722363699322</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1722363699322</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Add parser for Order ID">
+      <option name="closed" value="true" />
+      <created>1722367724073</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1722367724073</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
