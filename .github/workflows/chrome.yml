@@ -84,7 +84,7 @@ jobs:
           message: |
             ${{ job.status == 'success' && '_Tests passed successfully_' || '_Tests failed_' }}
             *Workflow URL:* https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-            *Allure Report:* https://bookimed.github.io/site-tests/
+            *Allure Report:* https://bproskura.github.io/qa_bookimed/${{ github.run_number }}
         if: always()
 
       - name: Send Slack message on completion
