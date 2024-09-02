@@ -73,16 +73,6 @@ jobs:
           publish_branch: gh-pages
           publish_dir: allure-history
 
-      - name: Post the link to the report
-        if: always()
-        uses: Sibz/github-status-action@v1
-        with:
-            authToken: ${{secrets.HUB_TOKEN}}
-            context: 'Test report'
-            state: 'success'
-            sha: ${{ github.event.pull_request.head.sha }}
-            target_url: simple-elf.github.io/github-allure-history/${{ github.run_number }}
-
       - name: Notify Slack on test completion
         id: generate_report
         uses: act10ns/slack@v2.0.0
@@ -94,7 +84,7 @@ jobs:
           message: |
             ${{ job.status == 'success' && '_Tests passed successfully_' || '_Tests failed_' }}
             *Workflow URL:* https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-            *Allure Report:* https://bproskura.github.io/qa_bookimed/${{ github.run_number }}
+            *Allure Report:* https://bproskura.github.io/qa_bookimed/${{ github.run_number }}/
         if: always()
 
       - name: Send Slack message on completion
