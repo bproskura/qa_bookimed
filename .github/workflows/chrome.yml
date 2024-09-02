@@ -39,18 +39,6 @@ jobs:
         id: install_browsers
         run: python -m playwright install --with-deps
 
-      - name: Fetch Allure history
-        uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-          path: gh-pages
-        if: always()
-        continue-on-error: true
-
-      - name: Copy Allure history
-        run: cp -R gh-pages/history allure-results/history || true
-        if: always()
-
       - name: Run your tests
         id: running_tests
         env:
@@ -61,45 +49,29 @@ jobs:
         run: pytest --alluredir=allure-results --headless=True
         if: always()
 
-      - name: Upload Allure results as artifact
-        id: generate_allure_report
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-results
-          path: allure-results
-          retention-days: 20
+      - name: Load test report history
+        uses: actions/checkout@v3
         if: always()
-
-      - name: Get Allure history
-        uses: actions/checkout@v4
+        continue-on-error: true
         with:
           ref: gh-pages
           path: gh-pages
-        if: always()
-        continue-on-error: true
 
-      - name: Generate Allure Report
-        uses: simple-elf/allure-report-action@master
+      - name: Build test report
+        uses: simple-elf/allure-report-action@v1.7
+        if: always()
         with:
-          allure_results: allure-results
-          allure_report: allure-report
           gh_pages: gh-pages
-          allure_history: gh-pages/allure-history
-          keep_reports: 20
-        if: always()
+          allure_history: allure-history
+          allure_results: build/allure-results
 
-      - name: List Allure Report directory contents
-        run: ls -la allure-report
-        if: always()
-
-      - name: Deploy report to GitHub Pages
-        id: deploy_to_github_pages
+      - name: Publish test report
         uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.HUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: allure-report
         if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-history
 
       - name: Purge GitHub Pages cache
         run: |
