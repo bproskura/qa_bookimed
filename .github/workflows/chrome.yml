@@ -63,7 +63,7 @@ jobs:
         with:
           gh_pages: gh-pages
           allure_history: allure-history
-          allure_results: build/allure-results
+          allure_results: allure-results
 
       - name: Publish test report
         uses: peaceiris/actions-gh-pages@v3
@@ -72,11 +72,6 @@ jobs:
           github_token: ${{ secrets.HUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
-
-      - name: Purge GitHub Pages cache
-        run: |
-          curl -X PURGE https://bookimed.github.io/site-tests/
-        if: always()
 
       - name: Notify Slack on test completion
         id: generate_report
